@@ -166,9 +166,10 @@ function personalizeHomepage(userId) {
 
 function fetchHistory(type, userId, cb) {
   var key = "libraryHistory:" + userId + ':' + type
-  var data
+  var data = localStorage.getItem(key)
+  console.log(data)
 
-  if(data = localStorage.getItem(key)) {
+  if(data) {
     data = JSON.parse(data)
 
     // refresh localStorage data in the background if it's older than an hour
