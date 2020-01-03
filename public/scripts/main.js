@@ -167,7 +167,6 @@ function personalizeHomepage(userId) {
 function fetchHistory(type, userId, cb) {
   var key = "libraryHistory:" + userId + ':' + type
   var data = localStorage.getItem(key)
-  console.log(data)
 
   if(data) {
     data = JSON.parse(data)
